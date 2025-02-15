@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NEXT JS AUTH
 
-## Getting Started
+. Create Application 
+. Install 
+    - Axios 
+    - bcryptjs (to encrypt decrypt password)
+    - jsonwebtoken 
+    - nodemailer
+    - react-hot-toast
+    - mongoose (to talk to db)
+. We don't need express in Next Js. 
 
-First, run the development server:
+- create models, helpers at the same level as app. 
+- create login folder - in app - inside login - page.tsx (Frontend)
+    Ex: app 📁 -> api 📁 -> users 📁 -> login 📁 -> route.ts file 📄
+- the fron end files can be put in the respective folders 📁 in app 📁 directly 
+    Ex: singUp 📁 -> page.tsx (respective UI frontend)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next Js : edge run 
+    . It won't stay connected to the Db, every single time we make a call, we should talk to the Db and must connect it. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+. Fill up .env with required fields. 
+. Create a dbConfig 📁 (To configure database)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+. We need the db connect method inside the  for every api call
+. In recent version of Next js - everything is a server component 
+    - To make  use of the front end part (CLIENT PART) - We explictly make use of "use client" (Turns this into client component)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+. we createa login page, sign in page and a profile page.
+. Inside the profile we create a user [id] 📁 dynamic 
+    - {params} : type
+    - we use the params to access the id of it. 
